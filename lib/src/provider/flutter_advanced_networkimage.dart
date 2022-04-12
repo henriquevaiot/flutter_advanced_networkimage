@@ -126,7 +126,7 @@ class AdvancedNetworkImage extends ImageProvider<AdvancedNetworkImage> {
     if (memory) {
       cache ??= imageCache;
       final key = await obtainKey(configuration);
-      return cache!.evict(key);
+      return cache.evict(key);
     }
     if (disk) {
       return removeFromCache(url);
